@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
 import 'package:portfolio/data/data.dart';
@@ -322,7 +320,14 @@ class HomeScreen extends StatelessWidget {
                               const SizedBox(
                                 height: 10,
                               ),
-                              Text(aboutMeSummary),
+                              ReadMoreText(
+                                aboutMeSummary,
+                                readMoreAlign: AlignmentDirectional.centerStart,
+                                numLines: 5,
+                                readLessText: 'ReadLess',
+                                readMoreText:
+                                    'Click to read more about me(^_^)',
+                              ),
                             ],
                           ),
                           Column(
@@ -472,7 +477,7 @@ class HomeScreen extends StatelessWidget {
                   shrinkWrap: true,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount:
-                          context.screenConstraint().width > 500 ? 2 : 1,
+                          context.screenConstraint().width > 650 ? 2 : 1,
                       childAspectRatio:
                           context.screenConstraint().width > 1000 ? 3 : 1.5),
                   itemCount: projectList.length,
