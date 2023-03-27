@@ -1,0 +1,28 @@
+^C:\USERS\UTKAR\FLUTTER-PORTFOLIO\BUILD\WINDOWS\CMAKEFILES\C5E8FC137F144EA3DD92447E8D9B3FA6\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\utkar\OneDrive\Documents\flutter PROJECT_DIR=C:\Users\utkar\flutter-portfolio FLUTTER_ROOT=C:\Users\utkar\OneDrive\Documents\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\utkar\flutter-portfolio\windows\flutter\ephemeral PROJECT_DIR=C:\Users\utkar\flutter-portfolio FLUTTER_TARGET=C:\Users\utkar\flutter-portfolio\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\utkar\flutter-portfolio\.dart_tool\package_config.json C:/Users/utkar/OneDrive/Documents/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\UTKAR\FLUTTER-PORTFOLIO\BUILD\WINDOWS\CMAKEFILES\65F3D3D9592B0048159BB219C8F5EDE1\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\UTKAR\FLUTTER-PORTFOLIO\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/utkar/flutter-portfolio/windows -BC:/Users/utkar/flutter-portfolio/build/windows --check-stamp-file C:/Users/utkar/flutter-portfolio/build/windows/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
