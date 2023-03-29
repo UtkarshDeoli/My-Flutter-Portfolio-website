@@ -31,7 +31,6 @@
 
   <title>portfolio</title>
   <link rel="manifest" href="manifest.json">
-
   <script>
     // The value below is injected by flutter build, do not touch.
     var serviceWorkerVersion = null;
@@ -53,6 +52,29 @@
         return appRunner.runApp();
       });
     });
+  </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCbcpQS06_6hw-PIBRjnzKafTI72cpxCYQ",
+      authDomain: "utkarsh-deoli-portfolio.firebaseapp.com",
+      projectId: "utkarsh-deoli-portfolio",
+      storageBucket: "utkarsh-deoli-portfolio.appspot.com",
+      messagingSenderId: "315225990445",
+      appId: "1:315225990445:web:5b4f4a512a90971a01dfa4",
+      measurementId: "G-8629M0JEWG"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
   </script>
 </body>
 </html>

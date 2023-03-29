@@ -46,10 +46,7 @@ class HomeScreen extends StatelessWidget {
                 gradient: LinearGradient(
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
-                  colors: [
-                    kGradient1,
-                    kGradient2,
-                  ],
+                  colors: [kGradient1, kGradient2, kGradient3, kGradient4],
                 ),
               ),
               child: Align(
@@ -58,7 +55,8 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(10.0),
                   child: CircleAvatar(
                     radius: 100,
-                    backgroundImage: AssetImage(imagePath),
+                    backgroundImage: NetworkImage(
+                        "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOQRXx0FGwItWZ6CpykEgNA1Kn4pYqR1oW_6VrW4c-_J2BmqI934hJSz5UvpERQmUsc0VhnFLtkW1wj8tvcD-48A7L2x1Q=w1920-h913"),
                   ),
                 ),
               ),
@@ -211,14 +209,9 @@ class HomeScreen extends StatelessWidget {
                                               ),
                                               GestureDetector(
                                                 onTap: () async {
-                                                  //Call to launch Websire
-                                                  final Uri websiteLauncher =
-                                                      Uri(
-                                                    scheme: 'https',
-                                                    path: website,
-                                                  );
-                                                  await launchUrl(
-                                                      websiteLauncher);
+                                                  final Uri url =
+                                                      Uri.parse(websiteuri);
+                                                  await launchUrl(url);
                                                 },
                                                 child: const Icon(
                                                   Icons.launch,

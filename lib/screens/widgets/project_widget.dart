@@ -54,18 +54,15 @@ class ProjectWidget extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: Padding(
               padding: const EdgeInsets.all(9.0),
-              child: Expanded(
-                flex: 1,
-                child: ElevatedButton(
-                  onPressed: () async {
-                    //Launch project on GitHub
-                    final Uri url = Uri.parse(projectData.link);
-                    await launchUrl(url);
-                  },
-                  child: Text(
-                    "View Project",
-                    style: kSubTitleText.copyWith(color: Colors.white),
-                  ),
+              child: ElevatedButton(
+                onPressed: () async {
+                  //Launch project on GitHub
+                  Uri url = Uri.parse(projectData.link);
+                  await launchUrl(url);
+                },
+                child: Text(
+                  "View Project",
+                  style: kSubTitleText.copyWith(color: Colors.white),
                 ),
               ),
             ),

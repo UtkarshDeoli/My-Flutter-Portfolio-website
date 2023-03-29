@@ -21,9 +21,15 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for android - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -47,29 +53,12 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDq-2Jot8l5_Pg2m86sbie_FdX28q1lhew',
-    appId: '1:960255673643:web:828836e3a8f056e611316e',
-    messagingSenderId: '960255673643',
-    projectId: 'utkarshdeoli-d086b',
-    authDomain: 'utkarshdeoli-d086b.firebaseapp.com',
-    storageBucket: 'utkarshdeoli-d086b.appspot.com',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDR4lT-A2uc45ieItQqHoTUBKGN3fzPBpM',
-    appId: '1:960255673643:android:d63090979c91d3db11316e',
-    messagingSenderId: '960255673643',
-    projectId: 'utkarshdeoli-d086b',
-    storageBucket: 'utkarshdeoli-d086b.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBggXeCEf6ZVi6b3lqzOT9yhNYfPiZN5uM',
-    appId: '1:960255673643:ios:af22ddda1ec3fc4311316e',
-    messagingSenderId: '960255673643',
-    projectId: 'utkarshdeoli-d086b',
-    storageBucket: 'utkarshdeoli-d086b.appspot.com',
-    iosClientId: '960255673643-e09qrmlueu6gphanvvf8i4r60ush7u14.apps.googleusercontent.com',
-    iosBundleId: 'com.example.portfolio',
+    apiKey: 'AIzaSyBDsHaMfCAC2xR_Na0qM86-AAd7BWMcYaU',
+    appId: '1:533034950285:web:0c23b58d625f75d02dccc4',
+    messagingSenderId: '533034950285',
+    projectId: 'utkarsh-deoli',
+    authDomain: 'utkarsh-deoli.firebaseapp.com',
+    storageBucket: 'utkarsh-deoli.appspot.com',
+    measurementId: 'G-5B5KVDXQNE',
   );
 }
